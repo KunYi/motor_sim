@@ -5,6 +5,7 @@ cc_library(
     hdrs = glob(["include/**/*"]),
     deps = select({
         "@bazel_tools//src/conditions:windows": [":sdl_windows"],
+        "@bazel_tools//src/conditions:linux": [":sdl_linux"],
         "//conditions:default": [], # linux not supported yet
     }),
     strip_include_prefix = "/third_party/sdl/include",
@@ -24,4 +25,7 @@ cc_library(
     srcs = glob(["lib/win64/*.dll"]),
 )
 
-
+cc_library(
+    name = "sdl_linux",
+    linkopts = ["-lSDL2"],
+)

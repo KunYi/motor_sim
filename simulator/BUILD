@@ -4,6 +4,7 @@ COPTS = select({
 
 LINKOPTS = select({
     "@bazel_tools//src/conditions:windows": [],
+    "@bazel_tools//src/conditions:linux": [],
     "//conditions:default": ["-lstdc++fs"],})
 
 package(default_visibility = ["//visibility:public"])
