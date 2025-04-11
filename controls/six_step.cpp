@@ -1,5 +1,6 @@
 #include "six_step.h"
 #include "util/math_constants.h"
+#include <cmath>
 
 bool get_commutation_state(Scalar progress) {
     while (progress <= 0) {

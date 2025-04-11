@@ -1,6 +1,7 @@
 #include "global_debug.h"
 #include <string>
 #include <vector>
+#include <algorithm>
 
 namespace gdebug {
 
