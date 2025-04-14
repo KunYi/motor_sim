@@ -1,10 +1,11 @@
 COPTS = select({
     "@bazel_tools//src/conditions:windows": ["/std:c++17"],
+    "@bazel_tools//src/conditions:linux": ["-std=c++17", "-I/usr/include/SDL2" ],
     "//conditions:default": ["-std=c++17"],})
 
 LINKOPTS = select({
     "@bazel_tools//src/conditions:windows": [],
-    "@bazel_tools//src/conditions:linux": [],
+    "@bazel_tools//src/conditions:linux": ["-lSDL2"],
     "//conditions:default": ["-lstdc++fs"],})
 
 package(default_visibility = ["//visibility:public"])
