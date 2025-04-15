@@ -14,7 +14,7 @@
 #include "wrappers/sdl_imgui.h"
 #include "wrappers/sdl_imgui_context.h"
 #include <Eigen/Dense>
-#include <absl/strings/str_format.h>
+#include "absl/strings/str_format.h"
 #include <array>
 #include <glad/glad.h>
 #include <implot.h>

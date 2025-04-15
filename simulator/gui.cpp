@@ -6,7 +6,7 @@
 #include "util/math_constants.h"
 #include "util/rotation.h"
 #include "util/sine_series.h"
-#include <absl/strings/str_format.h>
+#include "absl/strings/str_format.h"
 #include <imgui.h>
 #include <implot.h>
 #include <random>
